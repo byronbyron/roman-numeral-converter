@@ -34,11 +34,11 @@
             <h1 class="cover-heading">Enter a whole number</h1>
 
             <div class="form-group">
-                <input v-model="message" type="text" name="converter" class="form-control input-lg" placeholder="12">
+                <input v-model="number" type="text" name="converter" class="form-control input-lg" placeholder="12">
             </div>
 
-            <p class="lead">
-              {{ message }}
+            <p class="lead" v-show="number">
+              {{ romanNumeral }}
             </p>
           </div>
 
@@ -59,7 +59,12 @@
       new Vue({
         el: '#app',
         data: {
-          message: 'Hello Vue.js!'
+          number: 1
+        },
+        computed: {
+          romanNumeral: function() {
+            return (+this.number) + 1;
+          }
         }
       })
     </script>

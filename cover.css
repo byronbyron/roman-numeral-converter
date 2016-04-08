@@ -59,6 +59,10 @@ body {
   padding: 30px;
 }
 
+.form-control {
+  text-align: center;
+}
+
 /*
  * Header
  */
