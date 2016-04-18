@@ -39,7 +39,7 @@
 
             <h1>Enter a number...</h1>
             <div class="form-group">
-                <input v-model="number" type="text" name="converter" class="form-control input-lg" placeholder="12">
+                <input id="converter" v-model="number" type="text" name="converter" class="form-control input-lg" placeholder="12">
             </div>
 
             <p class="lead" v-show="number">
@@ -104,6 +104,8 @@
 
         return solution;
       }
+      
+      document.getElementById('converter').focus();
     </script>
   </body>
 </html>
