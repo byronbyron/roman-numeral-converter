@@ -82,6 +82,10 @@
           I: 1
         };
         var solution = '';
+
+        if (!+number) {
+          return "Please enter a number."
+        };
         
         for (var i in romanNumerals) {
           while (number >= romanNumerals[i]) {
