@@ -86,6 +86,14 @@
         if (!+number) {
           return "Please enter a number."
         };
+
+        if (number < 1) {
+          return "Please enter a positive number."
+        }
+
+        if (number >= 5000) {
+          return "Please enter a number less than 5000."
+        }
         
         for (var i in romanNumerals) {
           while (number >= romanNumerals[i]) {
